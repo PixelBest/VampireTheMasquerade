@@ -29,7 +29,9 @@
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill" HeightRequest="200"/>
+
+            <Polyline />
         </VerticalStackLayout>
     </ScrollView>
 
