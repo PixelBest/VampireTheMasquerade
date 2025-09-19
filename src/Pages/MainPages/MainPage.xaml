@@ -6,21 +6,10 @@
              >
         <Grid>
             <Grid ZIndex="1">
-                <Image Source="vampireicon2.png"
-                       WidthRequest="-1"
-                       HeightRequest="-1"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
+                <Image Style="{StaticResource MainPageImage}"
                        ZIndex="1"/>
                 <Label Text="Добро пожаловать в&#10;VAMPIRE: The Masquerade"
-                       FontSize="36"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       TextColor="#E0D8C0"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       LineBreakMode="WordWrap" 
-                       FontFamily="CormorantGaramondRegular"
+                       Style="{StaticResource MainPageLabel}"
                        ZIndex="2"/>
             </Grid>
         </Grid>

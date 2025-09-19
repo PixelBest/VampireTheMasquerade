@@ -4,4 +4,21 @@
     <Style x:Key="MainPageStyles" TargetType="ContentPage">
         <Setter Property="BackgroundColor" Value="#0D0D10"/>
     </Style>
+    <Style x:Key="MainPageImage" TargetType="Image">
+        <Setter Property="WidthRequest" Value="-1"/>
+        <Setter Property="HeightRequest" Value="-1"/>
+        <Setter Property="Source" Value="vampireicon2.png"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+    <Style x:Key="MainPageLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="TextColor" Value="#E0D8C0"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="LineBreakMode" Value="WordWrap"/>
+        <Setter Property="FontFamily" Value="CormorantGaramondRegular"/>
+    </Style>
 </ResourceDictionary>
