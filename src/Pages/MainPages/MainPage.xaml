@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VampireTheMasquerade.MainPage"
+             Style="{StaticResource MainPageStyles}"
+             >
+        <Grid>
+            <Grid ZIndex="1">
+                <Image Source="vampireicon2.png"
+                       WidthRequest="-1"
+                       HeightRequest="-1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       ZIndex="1"/>
+                <Label Text="Добро пожаловать в&#10;VAMPIRE: The Masquerade"
+                       FontSize="36"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       TextColor="#E0D8C0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       LineBreakMode="WordWrap" 
+                       FontFamily="CormorantGaramondRegular"
+                       ZIndex="2"/>
+            </Grid>
+        </Grid>
+</ContentPage>
