@@ -6,9 +6,5 @@
     xmlns:local="clr-namespace:VampireTheMasquerade"
     Title="VampireTheMasquerade">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
 
 </Shell>
