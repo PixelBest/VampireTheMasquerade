@@ -5,12 +5,16 @@
              Style="{StaticResource MainPageStyles}"
              >
         <Grid>
-            <Grid ZIndex="1">
-                <Image Style="{StaticResource MainPageImage}"
+            <StackLayout HorizontalOptions="Start"
+                         VerticalOptions="Start">
+                <ImageButton Style="{StaticResource TopMenuButton}"/>
+            </StackLayout>
+        <Grid ZIndex="1" Margin="0,150">
+            <Image Style="{StaticResource MainPageImage}"
                        ZIndex="1"/>
-                <Label Text="Добро пожаловать в&#10;VAMPIRE: The Masquerade"
+            <Label Text="Добро пожаловать в&#10;VAMPIRE: The Masquerade"
                        Style="{StaticResource MainPageLabel}"
                        ZIndex="2"/>
-            </Grid>
         </Grid>
+    </Grid>
 </ContentPage>

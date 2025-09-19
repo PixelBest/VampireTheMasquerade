@@ -21,4 +21,15 @@
         <Setter Property="LineBreakMode" Value="WordWrap"/>
         <Setter Property="FontFamily" Value="CormorantGaramondRegular"/>
     </Style>
+    <Style x:Key="TopMenuButton" TargetType="ImageButton">
+        <Setter Property="Source" Value="topmenu.png"/>
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="WidthRequest" Value="80"/>
+        <Setter Property="HeightRequest" Value="100"/>
+        <Style.Triggers>
+            <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                <Setter Property="Source" Value="topmenu_is_pressed.png"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>
