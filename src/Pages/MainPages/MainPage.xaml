@@ -3,18 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VampireTheMasquerade.MainPage"
              Style="{StaticResource MainPageStyles}"
+             xmlns:controls="clr-namespace:VampireTheMasquerade.Controls"
              >
-        <Grid>
-            <StackLayout HorizontalOptions="Start"
-                         VerticalOptions="Start">
-                <ImageButton Style="{StaticResource TopMenuButton}"/>
-            </StackLayout>
-        <Grid ZIndex="1" Margin="0,150">
+    <ContentPage.Resources>
+        <ResourceDictionary Source="/Pages/MainPages/MainPageStyle.xaml"/>
+    </ContentPage.Resources>
+    <Grid>
+            <Grid VerticalOptions="Start">
+                <controls:ImageCheckBoxButton x:Name="TopButton"
+                                              Style="{StaticResource TopMenuButton}"
+                                              Clicked="ImageButton_Clicked"
+                                              HorizontalOptions="Start"
+                                              ZIndex="1"/>
+                <Grid x:Name="TopMenu" 
+                      BackgroundColor="#0D0D10">
+                    
+                </Grid>
+            <Grid WidthRequest="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}},Path=WidthRequest}"
+                      HeightRequest="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}},Path=HeightRequest}"
+                      ZIndex="2" 
+                      HorizontalOptions="Start"
+                      Margin="0,0"
+                   Background="Red">
+                   
+                </Grid>
+            </Grid>
+        <Grid ZIndex="1"
+              Margin="0,150">
             <Image Style="{StaticResource MainPageImage}"
-                       ZIndex="1"/>
+                   ZIndex="1"/>
             <Label Text="Добро пожаловать в&#10;VAMPIRE: The Masquerade"
-                       Style="{StaticResource MainPageLabel}"
-                       ZIndex="2"/>
+                   Style="{StaticResource MainPageLabel}"
+                   ZIndex="2"/>
         </Grid>
     </Grid>
 </ContentPage>
