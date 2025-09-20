@@ -9,22 +9,26 @@ public partial class TopMenu : ContentView
 
 	private async void ImageCheckBoxButton_Clicked(object sender, EventArgs e)
 	{
-		var imageButton = sender as ImageCheckBoxButton;
+		var imageButton = TopMenuButton;
 
 		if (imageButton!.IsChecked)
 		{
-			await imageButton.TranslateTo(this.Width - 86, 0, 0);
 			imageButton.HorizontalOptions = LayoutOptions.End;
-			imageButton.TranslationX = default;
 			TopMenuButtonGrid.IsVisible = true;
+			GradientColorButton.IsVisible = true;
+			imageButton.Margin = new Thickness(0, -25, 0, 0);
 		}
 		else
 		{
-			await Task.WhenAll(imageButton.TranslateTo(0, 0, 0));
-
 			imageButton.HorizontalOptions = LayoutOptions.Start;
-			imageButton.TranslationX = default;
 			TopMenuButtonGrid.IsVisible = false;
+			GradientColorButton.IsVisible = false;
+			imageButton.Margin = new Thickness(0, 0, 0, 0);
+
 		}
+	}
+
+	private void GradientColorButton_Clicked(object sender, EventArgs e)
+	{
 	}
 }

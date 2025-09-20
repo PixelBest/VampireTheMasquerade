@@ -10,7 +10,7 @@
         <ResourceDictionary Source="/Resources/Styles/Styles.xaml"/>
     </ContentPage.Resources>
     <Grid>
-        <controls:TopMenu HorizontalOptions="Fill"/>
+        <controls:TopMenu HorizontalOptions="Fill" ZIndex="3"/>
         <Grid ZIndex="1"
               Style="{StaticResource MainPageGrid}">
             <Image Style="{StaticResource MainPageImage}"

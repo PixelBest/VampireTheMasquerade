@@ -15,6 +15,7 @@ namespace VampireTheMasquerade
 					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 					fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 					fonts.AddFont("CormorantGaramond-Regular.ttf", "CormorantGaramondRegular");
+					fonts.AddFont("YesevaOne-Regular.ttf", "YesevaOneRegular");
 				});
 			var services = builder.Services;
 			services.AddPages();

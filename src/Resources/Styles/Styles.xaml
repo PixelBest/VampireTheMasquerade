@@ -10,8 +10,8 @@
         <Setter Property="BackgroundColor" Value="#191921"/>
         <Setter Property="BorderColor" Value="#5E0C0C"/>
         <Setter Property="BorderWidth" Value="2"/>
-        <Setter Property="FontSize" Value="26"/>
-        <Setter Property="FontFamily" Value="CormorantGaramondRegular"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontFamily" Value="YesevaOneRegular"/>
         <Setter Property="Margin" Value="5,23"/>
         <Setter Property="HeightRequest" Value="60"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
