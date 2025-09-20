@@ -32,4 +32,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    <Style x:Key="MainPageGrid" TargetType="Grid">
+        <Setter Property="Margin" Value="0, 150, 0, 100"/>
+    </Style>
 </ResourceDictionary>
