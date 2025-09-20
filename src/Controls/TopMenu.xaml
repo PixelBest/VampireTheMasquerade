@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VampireTheMasquerade.Controls.TopMenu"
+             xmlns:controls="clr-namespace:VampireTheMasquerade.Controls">
+    <ContentView.Resources>
+        <ResourceDictionary Source="/Pages/MainPages/MainPageStyle.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Styles.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Colors.xaml"/>
+    </ContentView.Resources>
+    <VerticalStackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+        <VerticalStackLayout HorizontalOptions="Fill" ZIndex="2" BackgroundColor="{StaticResource MainColor}">
+            <Grid HorizontalOptions="Fill">
+                <controls:ImageCheckBoxButton x:Name="TopMenuButton"
+                                          Style="{StaticResource TopMenuButton}"
+                                          HorizontalOptions="Start"
+                                          Clicked="ImageCheckBoxButton_Clicked"/>
+                <Grid x:Name="TopMenuButtonGrid" Margin="0,0,86,0" IsVisible="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="test"
+                        Style="{StaticResource MainMenuButton}"
+                        HorizontalOptions="Fill"
+                        Grid.Column="0"/>
+                    <Button Text="test"
+                        Style="{StaticResource MainMenuButton}"
+                        HorizontalOptions="Fill"
+                        Grid.Column="1"/>
+                    <Button Text="test"
+                        Style="{StaticResource MainMenuButton}"
+                        HorizontalOptions="Fill"
+                        Grid.Column="2"/>
+                </Grid>
+            </Grid>
+        </VerticalStackLayout>
+        <Button BackgroundColor="red" 
+                VerticalOptions="Fill"
+                HorizontalOptions="Fill"
+                HeightRequest="1200"/>
+    </VerticalStackLayout>
+</ContentView>
