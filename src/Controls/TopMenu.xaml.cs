@@ -27,8 +27,4 @@ public partial class TopMenu : ContentView
 
 		}
 	}
-
-	private void GradientColorButton_Clicked(object sender, EventArgs e)
-	{
-	}
 }
