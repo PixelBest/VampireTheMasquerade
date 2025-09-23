@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VampireTheMasquerade.MainPage"
              Style="{DynamicResource MainPageStyles}"
+             ControlTemplate="{DynamicResource PageWithFooterTemplate}"
              xmlns:controls="clr-namespace:VampireTheMasquerade.Controls"
              >
     <ContentPage.Resources>

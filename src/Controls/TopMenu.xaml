@@ -8,56 +8,64 @@
         <ResourceDictionary Source="/Resources/Styles/Styles.xaml"/>
         <ResourceDictionary Source="/Resources/Styles/Colors.xaml"/>
     </ContentView.Resources>
-    <VerticalStackLayout HorizontalOptions="Fill"
-                         VerticalOptions="Fill">
+    <Grid>
         <VerticalStackLayout HorizontalOptions="Fill"
-                             BackgroundColor="{StaticResource MainColor}">
-            <Grid HorizontalOptions="Fill">
-                <controls:ImageCheckBoxButton x:Name="TopMenuButton"
-                                          Style="{StaticResource TopMenuButton}"
-                                          HorizontalOptions="Start"
-                                          Clicked="ImageCheckBoxButton_Clicked"
-                                          Margin="0,0,0,0"/>
-                <Grid x:Name="TopMenuButtonGrid" Margin="37,0,85,23" IsVisible="False" VerticalOptions="Start">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button Text="Информация по игре"
-                        Style="{StaticResource MainMenuButton}"
-                        HorizontalOptions="Fill"
-                        Grid.Column="0"
-                        Clicked="Button_Clicked"/>
-                    <Button Text="Персонажи"
-                        Style="{StaticResource MainMenuButton}"
-                        HorizontalOptions="Fill"
-                        Grid.Column="1"/>
-                    <Button Text="Создание персонажа"
-                        Style="{StaticResource MainMenuButton}"
-                        HorizontalOptions="Fill"
-                        Grid.Column="2"/>
-                    <Button Text="Настройки"
-                        Style="{StaticResource MainMenuButton}"
-                        HorizontalOptions="Fill"
-                        Grid.Column="3"/>
-                    <Button Text="Благодарность"
-                        Style="{StaticResource MainMenuButton}"
-                        HorizontalOptions="Fill"
-                        Grid.Column="4"/>
+                     VerticalOptions="Fill">
+            <VerticalStackLayout HorizontalOptions="Fill"
+                         BackgroundColor="{StaticResource MainColor}">
+                <Grid HorizontalOptions="Fill">
+                    <controls:ImageCheckBoxButton x:Name="TopMenuButton"
+                                      Style="{StaticResource TopMenuButton}"
+                                      HorizontalOptions="Start"
+                                      Clicked="ImageCheckBoxButton_Clicked"
+                                      Margin="0,0,0,0"/>
+                    <Grid x:Name="TopMenuButtonGrid" Margin="37,0,85,0" IsVisible="False" VerticalOptions="Start">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Text="На главную"
+                                Style="{StaticResource MainMenuButton}"
+                                HorizontalOptions="Fill"
+                                Grid.Column="0"
+                                Clicked="Button_Clicked_1"/>
+                        <Button Text="Информация по игре"
+                                Style="{StaticResource MainMenuButton}"
+                    HorizontalOptions="Fill"
+                    Grid.Column="1"
+                    Clicked="Button_Clicked"/>
+                        <Button Text="Персонажи"
+                    Style="{StaticResource MainMenuButton}"
+                    HorizontalOptions="Fill"
+                    Grid.Column="2"/>
+                        <Button Text="Создание персонажа"
+                    Style="{StaticResource MainMenuButton}"
+                    HorizontalOptions="Fill"
+                    Grid.Column="3"/>
+                        <Button Text="Благодарность"
+                    Style="{StaticResource MainMenuButton}"
+                    HorizontalOptions="Fill"
+                    Grid.Column="4"/>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </VerticalStackLayout>
+            <controls:ImageCheckBoxButton Source="blur.png"
+             Background="Transparent"
+            x:Name="GradientColorButton"
+            VerticalOptions="Fill"
+            HorizontalOptions="Fill"
+            IsVisible="False"
+            IsChecked="{Binding Source={x:Reference TopMenuButton},Path=IsChecked, Mode=TwoWay}"
+            Clicked="ImageCheckBoxButton_Clicked"
+            ZIndex="1"/>
         </VerticalStackLayout>
-        <controls:ImageCheckBoxButton Source="blur.png"
-                 Background="Transparent"
-                x:Name="GradientColorButton"
-                VerticalOptions="Fill"
-                HorizontalOptions="Fill"
-                IsVisible="False"
-                IsChecked="{Binding Source={x:Reference TopMenuButton},Path=IsChecked, Mode=TwoWay}"
-                Clicked="ImageCheckBoxButton_Clicked"
-                ZIndex="1"/>
-    </VerticalStackLayout>
+
+        <Label x:Name="DescriptionLabel"
+               FontSize="26"
+               TextColor="White"
+               Margin="90, 30, 0, 0"/>
+    </Grid>
 </ContentView>
