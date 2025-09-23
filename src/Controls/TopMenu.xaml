@@ -29,7 +29,8 @@
                     <Button Text="Информация по игре"
                         Style="{StaticResource MainMenuButton}"
                         HorizontalOptions="Fill"
-                        Grid.Column="0"/>
+                        Grid.Column="0"
+                        Clicked="Button_Clicked"/>
                     <Button Text="Персонажи"
                         Style="{StaticResource MainMenuButton}"
                         HorizontalOptions="Fill"

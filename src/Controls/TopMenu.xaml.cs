@@ -1,3 +1,5 @@
+using VampireTheMasquerade.Pages.GameInformationPages;
+
 namespace VampireTheMasquerade.Controls;
 
 public partial class TopMenu : ContentView
@@ -26,5 +28,10 @@ public partial class TopMenu : ContentView
 			imageButton.Margin = new Thickness(0, 0, 0, 0);
 
 		}
+	}
+
+	private void Button_Clicked(object sender, EventArgs e)
+	{
+		Navigation.PushModalAsync(new GameInformationPage());
 	}
 }
