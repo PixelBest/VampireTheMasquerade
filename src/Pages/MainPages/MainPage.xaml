@@ -2,16 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VampireTheMasquerade.MainPage"
-             Style="{StaticResource MainPageStyles}"
+             Style="{DynamicResource MainPageStyles}"
+             xmlns:controls="clr-namespace:VampireTheMasquerade.Controls"
              >
-        <Grid>
-        <Grid Style="{StaticResource MainPageGrid}"
-              ZIndex="1">
-                <Image Style="{StaticResource MainPageImage}"
-                       ZIndex="1"/>
-                <Label Text="Добро пожаловать в&#10;VAMPIRE: The Masquerade"
-                       Style="{StaticResource MainPageLabel}"
-                       ZIndex="2"/>
+    <ContentPage.Resources>
+        <ResourceDictionary Source="/Pages/MainPages/MainPageStyle.xaml"/>
+        <ResourceDictionary Source="/Resources/Styles/Styles.xaml"/>
+    </ContentPage.Resources>
+    <Grid>
+        <controls:TopMenu HorizontalOptions="Fill" ZIndex="3"/>
+        <Grid ZIndex="1"
+              Style="{StaticResource MainPageGrid}">
+            <Image Style="{StaticResource MainPageImage}"
+                   ZIndex="1"/>
+            <Label Text="Добро пожаловать в&#10;VAMPIRE: The Masquerade"
+                   Style="{StaticResource MainPageLabel}"
+                   ZIndex="2"/>
         </Grid>
-        </Grid>
+    </Grid>
 </ContentPage>
