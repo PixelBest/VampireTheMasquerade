@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
                 <ResourceDictionary Source="/Pages/MainPages/MainPageStyle.xaml"/>
+                <ResourceDictionary Source="/Pages/GameInformationPages/GameInformationStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

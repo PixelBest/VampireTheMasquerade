@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VampireTheMasquerade.Pages.GameInformationPages.DropdownList">
+    <VerticalStackLayout>
+        <VerticalStackLayout>
+            <HorizontalStackLayout VerticalOptions="Center"
+                                   Margin="10, 10, 0, 10">
+                <Label x:Name="MainLabel" 
+                        VerticalOptions="Center"
+                        FontSize="20"
+                        TextColor="White"
+                        WidthRequest="350"/>
+
+                <Button x:Name="DropdownButton"
+                        Clicked="OnDropdownButtonClicked"
+                        Style="{StaticResource DropdownButtonStyle}"/>
+            </HorizontalStackLayout>
+            <Border Style="{StaticResource BorderItem}"/>
+        </VerticalStackLayout>
+
+        <CollectionView x:Name="DropdownCollectionView"
+                        Style="{StaticResource DropdownCollectionViewStyle}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding .}"
+                                   FontSize="20"
+                                   TextColor="White"
+                                   Margin="20, 10, 0, 10"/>
+                            <Border Style="{StaticResource BorderItem}"/>
+                            
+                        </VerticalStackLayout>
+                        
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnItemTapped"/>
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentView>
