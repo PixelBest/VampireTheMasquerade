@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using VampireTheMasquerade.DataContext.Extensions;
 using VampireTheMasquerade.Extensions;
+using VampireTheMasquerade.Migrations;
 
 namespace VampireTheMasquerade
 {
@@ -20,12 +22,14 @@ namespace VampireTheMasquerade
 			var services = builder.Services;
 			services.AddPages();
 			services.AddViewModel();
-
+			services.AddDataContext();
+			services.AddMigrations();
 #if DEBUG
 			builder.Logging.AddDebug();
 #endif
-
-			return builder.Build();
+			var app = builder.Build();
+			app.RunMigarions();
+			return app;
 		}
 	}
 }

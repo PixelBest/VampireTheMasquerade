@@ -1,5 +1,4 @@
-﻿using VampireTheMasquerade.Controls;
-using VampireTheMasquerade.Pages.MainPages;
+﻿using VampireTheMasquerade.Pages.MainPages;
 
 namespace VampireTheMasquerade
 {
@@ -9,6 +8,7 @@ namespace VampireTheMasquerade
 
 		public MainPage(MainPageViewModel viewModel)
 		{
+
 			BindingContext = viewModel;
 			_viewModel = viewModel;
 			InitializeComponent();

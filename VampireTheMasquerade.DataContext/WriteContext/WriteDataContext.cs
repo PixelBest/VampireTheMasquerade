@@ -1,0 +1,21 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace VampireTheMasquerade.DataContext.WriteContext;
+
+/// <summary>
+/// Представляет инструмент для работы с данными.
+/// </summary>
+public class WriteDataContext : BaseDataContext
+{
+	#region .ctor
+	/// <summary>
+	/// Инициализирует новый экземпляр <see cref="WriteDataContext"/>.
+	/// </summary>
+	/// <param name="options"><see cref="DbContextOptions{T}"/>.</param>
+	public WriteDataContext(DbContextOptions<WriteDataContext> options)
+		: base(options)
+	{
+
+	}
+	#endregion
+}

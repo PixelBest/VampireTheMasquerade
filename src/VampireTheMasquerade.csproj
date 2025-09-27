@@ -66,6 +66,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\VampireTheMasquerade.DataContext\VampireTheMasquerade.DataContext.csproj" />
+	  <ProjectReference Include="..\VampireTheMasquerade.Migrations\VampireTheMasquerade.Migrations.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Pages\CharacterCreationPages\CharacterCreationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
