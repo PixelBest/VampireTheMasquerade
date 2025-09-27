@@ -1,4 +1,7 @@
+using VampireTheMasquerade.Pages.CharacterCreationPages;
+using VampireTheMasquerade.Pages.CharactersPages;
 using VampireTheMasquerade.Pages.GameInformationPages;
+using VampireTheMasquerade.Pages.GratitudePages;
 
 namespace VampireTheMasquerade.Controls;
 
@@ -43,11 +46,30 @@ public partial class TopMenu : ContentView
 
 	private void Button_Clicked(object sender, EventArgs e)
 	{
+		Navigation.PopModalAsync();
 		Navigation.PushModalAsync(new GameInformationPage());
 	}
 
 	private void Button_Clicked_1(object sender, EventArgs e)
 	{
 		Navigation.PopModalAsync();
+	}
+
+	private void Button_Clicked_2(object sender, EventArgs e)
+	{
+		Navigation.PopModalAsync();
+		Navigation.PushModalAsync(new CharacterCreationPage());
+	}
+
+	private void Button_Clicked_3(object sender, EventArgs e)
+	{
+		Navigation.PopModalAsync();
+		Navigation.PushModalAsync(new CharactersPage());
+	}
+
+	private void Button_Clicked_4(object sender, EventArgs e)
+	{
+		Navigation.PopModalAsync();
+		Navigation.PushModalAsync(new GratitudePage());
 	}
 }
