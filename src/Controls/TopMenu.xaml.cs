@@ -46,6 +46,7 @@ public partial class TopMenu : ContentView
 
 	private void Button_Clicked(object sender, EventArgs e)
 	{
+		Navigation.PopModalAsync();
 		Navigation.PushModalAsync(new GameInformationPage());
 	}
 
@@ -56,16 +57,19 @@ public partial class TopMenu : ContentView
 
 	private void Button_Clicked_2(object sender, EventArgs e)
 	{
+		Navigation.PopModalAsync();
 		Navigation.PushModalAsync(new CharacterCreationPage());
 	}
 
 	private void Button_Clicked_3(object sender, EventArgs e)
 	{
+		Navigation.PopModalAsync();
 		Navigation.PushModalAsync(new CharactersPage());
 	}
 
 	private void Button_Clicked_4(object sender, EventArgs e)
 	{
+		Navigation.PopModalAsync();
 		Navigation.PushModalAsync(new GratitudePage());
 	}
 }
