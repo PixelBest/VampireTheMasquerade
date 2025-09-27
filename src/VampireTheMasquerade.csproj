@@ -51,7 +51,7 @@
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Include="Resources\AppIcon\vampireicon2.svg" />
-		<MauiImage Update="Resources\Images\blur.png" BaseSize="6000,6000"/>
+		<MauiImage Update="Resources\Images\blur.png" BaseSize="6000,6000" />
 		<!-- Custom Fonts -->
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
@@ -66,6 +66,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\CharacterCreationPages\CharacterCreationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\CharactersPages\CharactersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\GameInformationPages\DropdownList.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -79,6 +85,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Controls\TopMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\GratitudePages\GratitudePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MainPages\MainPageStyle.xaml">
