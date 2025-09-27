@@ -1,6 +1,4 @@
-﻿using VampireTheMasquerade.Controls;
-using VampireTheMasquerade.DataContext.WriteContext;
-using VampireTheMasquerade.Pages.MainPages;
+﻿using VampireTheMasquerade.Pages.MainPages;
 
 namespace VampireTheMasquerade
 {
@@ -8,10 +6,9 @@ namespace VampireTheMasquerade
 	{
 		private readonly MainPageViewModel _viewModel;
 
-		public MainPage(MainPageViewModel viewModel,
-						WriteDataContext writeDataContext)
+		public MainPage(MainPageViewModel viewModel)
 		{
-			
+
 			BindingContext = viewModel;
 			_viewModel = viewModel;
 			InitializeComponent();
