@@ -33,22 +33,25 @@
                                 Grid.Column="0"
                                 Clicked="Button_Clicked_1"/>
                         <Button Text="Информация по игре"
-                                Style="{StaticResource MainMenuButton}"
-                    HorizontalOptions="Fill"
-                    Grid.Column="1"
-                    Clicked="Button_Clicked"/>
+                                Style="{StaticResource MainMenuButton}"                   
+                                HorizontalOptions="Fill"                   
+                                Grid.Column="1"
+                                Clicked="Button_Clicked"/>
                         <Button Text="Персонажи"
-                    Style="{StaticResource MainMenuButton}"
-                    HorizontalOptions="Fill"
-                    Grid.Column="2"/>
+                                Style="{StaticResource MainMenuButton}"
+                                HorizontalOptions="Fill"
+                                Grid.Column="2"
+                                Clicked="Button_Clicked_3"/>
                         <Button Text="Создание персонажа"
-                    Style="{StaticResource MainMenuButton}"
-                    HorizontalOptions="Fill"
-                    Grid.Column="3"/>
+                                Style="{StaticResource MainMenuButton}"
+                                HorizontalOptions="Fill"
+                                Grid.Column="3"
+                                Clicked="Button_Clicked_2"/>
                         <Button Text="Благодарность"
-                    Style="{StaticResource MainMenuButton}"
-                    HorizontalOptions="Fill"
-                    Grid.Column="4"/>
+                                Style="{StaticResource MainMenuButton}"
+                                HorizontalOptions="Fill"
+                                Grid.Column="4"
+                                Clicked="Button_Clicked_4"/>
                     </Grid>
                 </Grid>
             </VerticalStackLayout>
