@@ -15,7 +15,7 @@ namespace VampireTheMasquerade
 		{
 			get;
 			private set;
-		}
+		} = null!;
 		public static MauiApp CreateMauiApp()
 		{
 			var builder = MauiApp.CreateBuilder();
