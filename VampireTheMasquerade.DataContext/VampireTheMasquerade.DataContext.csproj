@@ -23,4 +23,9 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\VampireTheMasquerade.Domain\VampireTheMasquerade.Domain.csproj" />
+	  <ProjectReference Include="..\VampireTheMasquerade.Migrations\VampireTheMasquerade.Migrations.csproj" />
+	</ItemGroup>
+
 </Project>

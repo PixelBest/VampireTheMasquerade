@@ -1,6 +1,4 @@
 ﻿using FluentMigrator.Runner;
-using VampireTheMasquerade.DataContext;
-using VampireTheMasquerade.DataContext.WriteContext;
 using VampireTheMasquerade.Migrations.Migrations;
 
 namespace VampireTheMasquerade.Migrations;
@@ -15,13 +13,13 @@ public static class MigrationExtension
 	/// </summary>
 	/// <param name="services"><see cref="IServiceCollection"/>.</param>
 	/// <returns><see cref="IServiceCollection"/>.</returns>
-	public static IServiceCollection AddMigrations(this IServiceCollection services)
+	public static IServiceCollection AddMigrations(this IServiceCollection services, string dbPath)
 	{
 		//TODO: Добавить ссылку на настоящию миграцию, тестовую убрать.
 		services.AddFluentMigratorCore()
 				.ConfigureRunner(rb => rb.AddSQLite()
-										 .WithGlobalConnectionString(BaseDataContext.DbPath)
-										 .ScanIn(typeof(M001_AddTestTableMigrations).Assembly)
+										 .WithGlobalConnectionString(dbPath)
+										 .ScanIn(typeof(M001_AddCharacterTableMigration).Assembly)
 										 .For
 										 .All());
 

@@ -15,7 +15,10 @@ public class WriteDataContext : BaseDataContext
 	public WriteDataContext(DbContextOptions<WriteDataContext> options)
 		: base(options)
 	{
-
+#if DEBUG
+		Database.EnsureDeleted();
+#endif
+		Database.EnsureCreated();
 	}
 	#endregion
 }

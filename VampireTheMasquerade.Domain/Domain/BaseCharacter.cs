@@ -7,6 +7,15 @@ public abstract class BaseCharacter
 {
 	#region Properties
 	/// <summary>
+	/// Идентификатор персонажа.
+	/// </summary>
+	public Guid Id
+	{
+		get;
+		set;
+	}
+
+	/// <summary>
 	/// Наименование персонажа.
 	/// </summary>
 	public string Name
@@ -45,7 +54,7 @@ public abstract class BaseCharacter
 	/// <summary>
 	/// Дата последнего изменения.
 	/// </summary>
-	public DateTime LastEdit
+	public DateTime LastChanged
 	{
 		get;
 		set;

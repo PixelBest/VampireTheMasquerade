@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using VampireTheMasquerade.DataContext;
 using VampireTheMasquerade.DataContext.Extensions;
 using VampireTheMasquerade.Extensions;
 using VampireTheMasquerade.Migrations;
@@ -23,7 +24,7 @@ namespace VampireTheMasquerade
 			services.AddPages();
 			services.AddViewModel();
 			services.AddDataContext();
-			services.AddMigrations();
+			services.AddMigrations(BaseDataContext.DbPath);
 #if DEBUG
 			builder.Logging.AddDebug();
 #endif
