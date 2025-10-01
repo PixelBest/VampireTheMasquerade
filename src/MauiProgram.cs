@@ -8,6 +8,9 @@ namespace VampireTheMasquerade
 {
 	public static class MauiProgram
 	{
+		/// <summary>
+		/// Провайдер сервисов.
+		/// </summary>
 		public static IServiceProvider ServiceProvider
 		{
 			get;
