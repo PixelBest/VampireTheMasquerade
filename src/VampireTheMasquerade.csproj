@@ -67,6 +67,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\VampireTheMasquerade.DataContext\VampireTheMasquerade.DataContext.csproj" />
+	  <ProjectReference Include="..\VampireTheMasquerade.Domain\VampireTheMasquerade.Domain.csproj" />
 	  <ProjectReference Include="..\VampireTheMasquerade.Migrations\VampireTheMasquerade.Migrations.csproj" />
 	</ItemGroup>
 
