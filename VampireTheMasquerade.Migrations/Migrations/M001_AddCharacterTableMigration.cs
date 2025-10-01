@@ -75,6 +75,9 @@ public class M001_AddCharacterTableMigration : Migration
 			.NotNullable()
 			.WithColumn(LastChangedColumnName)
 			.AsDateTime()
+			.NotNullable()
+			.WithColumn(DiscriminatorColumnName)
+			.AsString()
 			.NotNullable();
 	}
 	#endregion

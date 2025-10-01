@@ -8,6 +8,11 @@ namespace VampireTheMasquerade
 {
 	public static class MauiProgram
 	{
+		public static IServiceProvider ServiceProvider
+		{
+			get;
+			private set;
+		}
 		public static MauiApp CreateMauiApp()
 		{
 			var builder = MauiApp.CreateBuilder();
@@ -30,6 +35,7 @@ namespace VampireTheMasquerade
 #endif
 			var app = builder.Build();
 			app.RunMigarions();
+			ServiceProvider = app.Services;
 			return app;
 		}
 	}

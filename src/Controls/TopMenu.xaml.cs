@@ -1,3 +1,5 @@
+using VampireTheMasquerade.DataContext.WriteContext;
+using VampireTheMasquerade.Domain.Domain;
 using VampireTheMasquerade.Pages.CharacterCreationPages;
 using VampireTheMasquerade.Pages.CharactersPages;
 using VampireTheMasquerade.Pages.GameInformationPages;
